@@ -1,33 +1,27 @@
 ---
-title: ExpressJS Postgres
-description: An ExpressJS server that connects to a PostgreSQL database
+title: GraphQL Server + Express + TypeORM + TypeGraphql
+description: An Express + GraphQL Server that connects to a Postgres DB, pre-configured with TypeORM for DB types and TypeGraphql for GQL Schema generation
 tags:
   - express
   - postgresql
   - typescript
+  - GraphQL
+  - TypeORM
+  - TypeGraphql
 ---
 
-# ExpressJS Postgres Example
+# GraphQL + Express Server
 
-This example starts an [ExpressJS](https://expressjs.com/) server that connects
+This example starts an [ExpressJS](https://expressjs.com/) + [GraphQL](https://www.apollographql.com/docs/apollo-server) server that connects
 to a Railway PostgreSQL database.
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/VUVlu3)
 
 ## ✨ Features
 
-- Postgres
 - Express
-- TypeScript
-
-## 💁‍♀️ How to use
-
-- Install dependencies `yarn`
-- [Create a Railway project with the Postgres plugin](https://dev.new)
-- Connect to your Railway project `railway link`
-- Start the server `railway run yarn dev`
-
-## 📝 Notes
-
-The server started simply returns the current time in the database. The SQL
-query is located in `src/index.js`.
+- Postgresql
+- Typescript
+- GraphQL
+- TypeORM
+- TypeGraphql
