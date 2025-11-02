@@ -1,14 +1,28 @@
 import express from "express";
+import "reflect-metadata";
+import { AppDataSource } from "./datasource";
 
-const app = express();
 const port = process.env.PORT || 3333;
 
-app.use(express.json());
+async function main() {
+  try {
+    await AppDataSource.initialize();
 
-app.get("/", async (req, res) => {
-  res.send(`Hello world!`);
-});
+    const app = express();
 
-app.listen(port, () => {
-  console.log(`Server is listening at http://localhost:${port}`);
-});
+    app.use(express.json());
+
+    app.get("/", async (req, res) => {
+      res.send(`Hello world!`);
+    });
+
+    app.listen(port, () => {
+      console.log(`Server is listening at http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+}
+
+main();

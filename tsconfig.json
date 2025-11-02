@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "incremental": true,
     "target": "es6",
     "module": "commonjs",
