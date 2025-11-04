@@ -10,7 +10,7 @@ import cors from "cors";
 import { expressMiddleware } from "@as-integrations/express5";
 
 const port = process.env.PORT || 3333;
-const serverUrl = process.env.RAILWAY_PUBLIC_DOMAIN || `http://localhost`;
+const serverUrl = process.env.RAILWAY_PUBLIC_DOMAIN || `http://localhost:${port}`;
 
 async function main() {
   try {
@@ -43,13 +43,13 @@ async function main() {
 
     app.get("/", async (req, res) => {
       res.send(
-        `Hello world! GQL server is running at ${serverUrl}:${port}/graphql`
+        `Hello world! GQL server is running on the /graphql endpoint`
       );
     });
 
     await new Promise<void>((resolve) => httpServer.listen({ port }, resolve));
 
-    console.log(`Server is listening at ${serverUrl}:${port}`);
+    console.log(`Server is listening at ${serverUrl}`);
   } catch (error) {
     console.error(error);
     process.exit(1);
