@@ -42,7 +42,9 @@ async function main() {
     app.use(express.json());
 
     app.get("/", async (req, res) => {
-      res.send(`Hello world!`);
+      res.send(
+        `Hello world! GQL server is running at ${serverUrl}:${port}/graphql`
+      );
     });
 
     await new Promise<void>((resolve) => httpServer.listen({ port }, resolve));
