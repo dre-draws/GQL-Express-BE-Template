@@ -17,14 +17,14 @@ For local development there is a docker compose file that I have set up for conv
 ```
 yarn install
 
-yarn dev:local
+yarn dev
 ```
 
 If you want to change the default env variables being used while in local development, create your own .env file using the .env.example in the repo as reference. 
 
 ---
 
-For the deployed environemtns (staging/prod):
+For the deployed environments (staging/prod):
 
 This template is set up to automatically use Railway's service variables to make sure that your GQL server hooks up to your Postgres DB without having to change anything when deployed. 
 
