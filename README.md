@@ -1,13 +1,6 @@
 ---
 title: GraphQL Server + Express + TypeORM + TypeGraphql
 description: An Express + GraphQL Server that connects to a Postgres DB, pre-configured with TypeORM for DB types and TypeGraphql for GQL Schema generation
-tags:
-  - express
-  - postgresql
-  - typescript
-  - GraphQL
-  - TypeORM
-  - TypeGraphql
 ---
 
 # GraphQL + Express Server
